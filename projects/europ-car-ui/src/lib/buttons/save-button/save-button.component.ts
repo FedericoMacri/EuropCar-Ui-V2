@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { SaveIconComponent } from "../../icons/save-icon/save-icon.component";
 
 @Component({
-  selector: 'SIbuttons-save-button',
+  selector: 'ECar-save-button',
   standalone: true,
   imports: [SaveIconComponent],
   templateUrl: './save-button.component.html',
@@ -24,4 +24,9 @@ testo = "Salva"
 
 @Input()
 isIconEnabled:boolean = true;
+
+@Input()
+isButtonDisabled:boolean = false;
+
+
 }

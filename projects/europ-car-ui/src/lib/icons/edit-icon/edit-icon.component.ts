@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'Ecar-delete-icon',
+  selector: 'ecar-edit-icon',
   standalone: true,
   imports: [],
-  templateUrl: './delete-icon.component.html',
-  styleUrl: './delete-icon.component.css'
+  templateUrl: './edit-icon.component.html',
+  styleUrl: './edit-icon.component.css'
 })
-export class DeleteIconComponent {
+export class EditIconComponent {
 
 @Input()
 height = 30;
@@ -20,5 +20,4 @@ color='#ffffff'
 
 @Input()
 isEnabled:boolean = true;
-
 }

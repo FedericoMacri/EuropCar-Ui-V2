@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'SIbuttons-back-icon',
+  selector: 'Ecar-back-icon',
   standalone: true,
   imports: [],
   templateUrl: './back-icon.component.html',

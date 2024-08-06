@@ -7,10 +7,9 @@ border: 4;
 border-bottom: #021152;
 border-radius: 25px;
 padding: 10px;
-min-height: 30px;
-min-width: 120px;
-opacity: 0.8;
 
+opacity: 0.8;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
 cursor: pointer;
 text-align: center;
@@ -19,6 +18,31 @@ line-height: 1.2;
 transition: opacity 0.3s ease;
 }
 
+.button:disabled {
+  background-color:rgb(115, 119, 115) !important;
+  color: #ffffff;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 0;
+  border-radius: 25px;
+  padding: 10px;
+  opacity: 0.8;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
+  cursor: none !important;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2;
+  transition: opacity 0.3s ease;
+  
+  }
+
 .button:hover {
   opacity: 1;
+}
+
+.button:hover:disabled{
+    
+  opacity: 1;
+
 }

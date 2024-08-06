@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { BackIconComponent } from "../../icons/back-icon/back-icon.component";
 
 @Component({
-  selector: 'ECarUi-back-button',
+  selector: 'ECar-back-button',
   standalone: true,
   imports: [BackIconComponent],
   templateUrl: './back-button.component.html',
@@ -25,4 +25,9 @@ testo = 'Torna indietro'
  
 @Input()
 isIconEnabled:boolean = true;
+
+@Input()
+isButtonDisabled:boolean = false;
+
+
 }
