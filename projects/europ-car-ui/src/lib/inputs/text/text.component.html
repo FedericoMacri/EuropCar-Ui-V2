@@ -1,4 +1,4 @@
 <label class="input">
-    <input type="text" class="input__field" #valore [value]="value"  [size]="size" (input)="onChange()"  [placeholder]="placeHolder" [disabled]="isDisabled" />
+    <input type="text" class="input__field" #valore name="valore" [value]="value"  [size]="size" (input)="writeValue(valore.value)"  [placeholder]="placeHolder" [disabled]="isDisabled" />
     <span class="input__label">{{preview}}</span>
 </label>
