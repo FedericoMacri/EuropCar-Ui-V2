@@ -1,20 +1,39 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, NgModule, OnChanges, output, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'ecar-text',
   standalone: true,
   imports: [],
   templateUrl: './text.component.html',
-  styleUrl: './text.component.css'
+  styleUrl: './text.component.scss'
 })
-export class TextComponent {
+export class TextComponent   {
 
-value!:string;
+@ViewChild('valore') valore!: ElementRef<HTMLInputElement>
 
 @Input()
-placeHolder:string = "Placeholder";
+value:string ="";
+
+@Output() valueChange = new EventEmitter<string>();
+  
+
+
+@Input()
+placeHolder:string = "...";
 
 @Input()
 preview:string = "Insert your preview"
+
+
+@Input()
+isDisabled:boolean = false;
+
+@Input()
+size:number = 30;
+
+
+onChange() {
+  this.valueChange.emit();
+}
 
 }
