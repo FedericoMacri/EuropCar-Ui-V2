@@ -27,17 +27,20 @@ export class TextComponent implements ControlValueAccessor {
  console.log(value);
 }
 
-
- registerOnTouched(fn: () => void): void {
-  console.log('touched');
+public onTouched = () => {};
+ registerOnTouched(onTouched : any): void {
+  this.onTouched = onTouched;
 }
 
-registerOnChange(fn: (_: any) => {}): void {
-  console.log('change');
+public onChange = (value:any) => { } ;
+registerOnChange(onChange:any): void {
+ 
+  this.onChange = onChange
 }
+
 
  setDisabledState(isDisabled: boolean): void {
-  console.log(isDisabled);
+  this.isDisabled = isDisabled;
 }
 
 @ViewChild('valore') valore!: ElementRef<HTMLInputElement>
@@ -62,7 +65,10 @@ isDisabled:boolean = false;
 @Input()
 size:number = 30;
 
-
+setValue(valoreIn:string){
+  this.value = valoreIn;
+  this.onChange(this.value);
+}
 
 
 }
