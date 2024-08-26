@@ -1,0 +1,18 @@
+<div id="select" (click)="isDropdownActive = true" #valore>
+    <div style="display: flex; width: 100%; justify-content: space-between ;">
+        {{selectedOption?.name || placeHolder}}
+        <span *ngIf="selectedOption" (click)="selectedOption = undefined; $event.stopImmediatePropagation()">X</span>
+    </div>
+
+    <ng-content select="#opzione" #opzione id="dropdown" [ngClass]="{active: isDropdownActive}" (click)="selectedOption = opzione.value; isDropdownActive = false; $event.stopImmediatePropagation(); writeValue(opzione.value)">
+    
+    </ng-content>
+
+   <!--  <div id="dropdown" [ngClass]="{active: isDropdownActive}">
+        <ul>
+            <li *ngFor="let option of options"  ><a (click)="selectedOption = option; isDropdownActive = false; $event.stopImmediatePropagation();">{{testoOpzione}}</a></li>
+             
+        </ul>
+    </div> -->
+
+</div>

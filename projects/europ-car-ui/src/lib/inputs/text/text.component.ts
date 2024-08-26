@@ -17,31 +17,7 @@ import { ControlValueAccessor, DefaultValueAccessor, NG_VALUE_ACCESSOR } from '@
 })
 export class TextComponent implements ControlValueAccessor {
 
- writeValue(value: any): void {
- this.value= value;
-
- if(this.valore){
-  this.valore.nativeElement.value = this.value;
- }
-
- console.log(value);
-}
-
-public onTouched = () => {};
- registerOnTouched(onTouched : any): void {
-  this.onTouched = onTouched;
-}
-
-public onChange = (value:any) => { } ;
-registerOnChange(onChange:any): void {
  
-  this.onChange = onChange
-}
-
-
- setDisabledState(isDisabled: boolean): void {
-  this.isDisabled = isDisabled;
-}
 
 @ViewChild('valore') valore!: ElementRef<HTMLInputElement>
 
@@ -50,8 +26,6 @@ value:string ="";
 
 @Output() valueChange = new EventEmitter<string>();
   
-
-
 @Input()
 placeHolder:string = "...";
 
@@ -65,10 +39,36 @@ isDisabled:boolean = false;
 @Input()
 size:number = 30;
 
-setValue(valoreIn:string){
+
+
+writeValue(value: any): void {
+  this.value= value;
+ 
+  if(this.valore){
+   this.valore.nativeElement.value = this.value;
+  }
+ 
+ 
+ }
+ 
+ public onTouched = () => {};
+  registerOnTouched(onTouched : any): void {
+   this.onTouched = onTouched;
+ }
+ 
+ public onChange = (value:any) => { } ;
+ registerOnChange(onChange:any): void {
+  
+   this.onChange = onChange
+ }
+ 
+ 
+  setDisabledState(isDisabled: boolean): void {
+   this.isDisabled = isDisabled;
+ }
+
+ setValue(valoreIn:string){
   this.value = valoreIn;
   this.onChange(this.value);
 }
-
-
 }
