@@ -1,0 +1,21 @@
+ul{
+    list-style: none;
+    margin: 0px;
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+
+    
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+    padding: 15px 30px;
+    display: block;
+    border-bottom: 1px solid #000000;
+    
+    &:hover{
+        background-color: rgba(7, 103, 25, 0.889);
+    }
+}

@@ -6,8 +6,8 @@ import { OptionComponent } from "../option/option.component";
 
 @Component({
   selector: 'ecar-select',
-  standalone: true,
-  imports: [CommonModule, OptionComponent],
+  standalone :true,
+  imports: [CommonModule],
   templateUrl: './select.component.html',
   styleUrl: './select.component.css',
   providers:[
@@ -23,39 +23,28 @@ import { OptionComponent } from "../option/option.component";
 })
 export class SelectComponent implements ControlValueAccessor,OnInit {
 
-
-  @ViewChild('valore') valore!: ElementRef<HTMLInputElement>
+  
+  
 
   @Input()
-  value:string = '';
+  value:any = '';
 
   @Output() valueChange = new EventEmitter<string>();
 
-  @Input()
-  placeHolder:string = "Seleziona una opzione"
+  placeHolder:string ="Scegli"
   
   isDisabled = false;
   isDropdownActive = false;
-  selectedOption:any;
 
   @Input()
-  options = [
-    {}
-  ]
+  selectedOption!:string;
 
-  @Input()
-  testoOpzione:string ="''";
-
-  @Input()
-  valueOpzione:string ="''";
     
 
   writeValue(inputValue:string): void {
     this.value = inputValue;
 
-    if(this.valore){
-      this.valore.nativeElement.value = this.value;
-     }
+   
   }
 
   public onTouched = () => {};
@@ -74,14 +63,16 @@ export class SelectComponent implements ControlValueAccessor,OnInit {
     this.isDisabled = isDisabled;
   }
 
-  setValue(valoreIn:string){
+  @Input()
+  setValue(valoreIn:any){
     this.value = valoreIn;
     this.onChange(this.value);
+    
   }
  
-  ngOnInit(): void {
-    this.valore.nativeElement.value = '';
-  }
-   
+
+ ngOnInit(): void {
+  
+}
 
 }
