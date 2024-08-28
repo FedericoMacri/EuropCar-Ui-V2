@@ -1,20 +1,30 @@
-import { Component, Input } from '@angular/core';
-import { ecarinputmodule } from "../input-module/europ-car-input-module.module";
-import { SelectComponent } from "../select/select.component";
+import { Component, Input, OnInit } from '@angular/core';
+import { SelectComponent } from '../select/select.component';
 
 @Component({
   selector: 'ecar-option',
   standalone: true,
-  imports: [SelectComponent],
+  imports: [],
   templateUrl: './option.component.html',
   styleUrl: './option.component.css'
 })
-export class OptionComponent {
+export class OptionComponent  {
+
+
+  @Input()
+  select!:SelectComponent;
 
   @Input()
   testo:string ="";
 
   @Input()
-  value:string ="";
+  optionValue:string ="";
+
+  selezione(input:any,name:string){
+    this.select.setValue(input);
+    this.select.isDropdownActive=false;
+    this.select.selectedOption= name;
+    
+  }
 
 }
