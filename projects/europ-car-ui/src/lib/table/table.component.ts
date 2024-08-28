@@ -1,9 +1,12 @@
 import { Component, ContentChild, Input, TemplateRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'ecar-table',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
 })

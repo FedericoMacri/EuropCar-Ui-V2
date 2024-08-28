@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddButtonComponent, AddIconComponent, BackButtonComponent, BackIconComponent, DeleteButtonComponent, DeleteIconComponent, EditButtonComponent, EditIconComponent, ResetButtonComponent, ResetIconComponent, SaveButtonComponent, SaveIconComponent } from '../public-api';
+import { AddButtonComponent, AddIconComponent, BackButtonComponent, BackIconComponent, DeleteButtonComponent, DeleteIconComponent, EditButtonComponent, EditIconComponent, ResetButtonComponent, ResetIconComponent, SaveButtonComponent, SaveIconComponent, TableComponent } from '../public-api';
+
 
 
 
@@ -23,7 +24,8 @@ import { AddButtonComponent, AddIconComponent, BackButtonComponent, BackIconComp
     AddIconComponent,
     EditIconComponent,
     ResetButtonComponent,
-    ResetIconComponent
+    ResetIconComponent,
+    TableComponent
     
   
     
@@ -43,7 +45,8 @@ import { AddButtonComponent, AddIconComponent, BackButtonComponent, BackIconComp
     AddIconComponent,
     EditIconComponent,
     ResetButtonComponent,
-    ResetIconComponent
+    ResetIconComponent,
+    TableComponent
 
   ]
 })
