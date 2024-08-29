@@ -20,14 +20,20 @@
       </tr>
     </tbody>
     <tfoot>
-      <td colspan="100%">
-      <ng-container
-        *ngTemplateOutlet="
-          paginator || null;
-        "
-      ></ng-container>
-      </td>
-    </tfoot>
+        <td colspan="100%" *ngIf="paginator!=null">
+        <ng-container
+          *ngTemplateOutlet="
+            paginator;
+          "
+        ></ng-container>
+        </td>
+        <tr *ngIf="footer!= null">
+          <ng-container
+            *ngTemplateOutlet="
+            footer
+            "></ng-container>
+        </tr>
+      </tfoot>
   </table>
   
 

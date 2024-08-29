@@ -15,7 +15,8 @@ export class TableComponent {
   @Input() data!: any[];
   @ContentChild('headers') headers: TemplateRef<any> | undefined;
   @ContentChild('rows') rows: TemplateRef<any> | undefined;
-  @ContentChild('paginator') paginator: TemplateRef<any> | undefined;
+  @ContentChild('paginator') paginator!: TemplateRef<any>;
+  @ContentChild('footer') footer!: TemplateRef<any>;
 
   @Input() color!: string
 
