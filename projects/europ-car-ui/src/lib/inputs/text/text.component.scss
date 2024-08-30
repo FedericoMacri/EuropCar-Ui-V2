@@ -28,6 +28,10 @@
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
 	color: #000000;
+
+	&:hover{
+		cursor: edit;
+	}
   }
 
   .input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { EditIconComponent } from "../../icons/edit-icon/edit-icon.component";
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'ecar-edit-button',
