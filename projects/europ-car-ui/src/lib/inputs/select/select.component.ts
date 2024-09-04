@@ -31,6 +31,7 @@ export class SelectComponent implements ControlValueAccessor,OnInit {
 
   @Output() valueChange = new EventEmitter<string>();
 
+  @Input()
   placeHolder:string ="Scegli"
   
   isDisabled = false;
