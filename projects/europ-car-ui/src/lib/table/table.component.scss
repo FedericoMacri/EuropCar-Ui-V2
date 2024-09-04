@@ -1,98 +1,33 @@
 ::ng-deep table {
-    overflow:hidden ;
-    border-radius: 15px;
-    width: 100%;
-    margin: 2rem 0;
-    border-collapse: collapse;
-    font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    
-
-    
-
-    thead {
-        tr {
-          background-color: #dd0031;
-          color: #ffffff;
-          text-align: left;
-        }
-      }
-    
-
-    tbody tr:hover {
-      background-color: #f6f6f6;
-    }
-
-    th,
-    td {
-      padding: 1rem;
-    }
-  }
-
-  .light {
-    background-color: rgb(216, 216, 216);
-    color: rgb(0, 0, 0);
-    thead {
-      tr {
-        background-color: #d3d3d3;
-        color: #000000;
-        text-align: left;
-      }
-    }
-  }
-
-  .light-striped {
-    background-color: rgb(216, 216, 216);
-    color: rgb(0, 0, 0);
-    thead {
-      tr {
-        background-color: #d3d3d3;
-        color: #000000;
-        text-align: left;
-      }
-    }
-    tr:nth-child(even) {
-      background-color: #8e8e8e;
-    }
-  }
+  overflow:hidden ;
+  border-radius: 15px;
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  
 
   
-  .dark {
-    background-color: rgb(20, 20, 20);
-    color: white;
-    thead {
-      tr {
-        background-color: #3e3e3e;
-        color: #ffffff;
-        text-align: left;
-      }
-    }
-    tbody tr:hover {
-      background-color: #f6f6f6;
-      color: black;
+
+  thead {
+    tr {
+      background-color: #d3d3d3;
+      color: #000000;
+      text-align: left;
     }
   }
-
-
-  .dark-striped {
-    background-color: rgb(20, 20, 20);
-    color: white;
-    thead {
-      tr {
-        background-color: #3e3e3e;
-        color: #ffffff;
-        text-align: left;
-      }
-    }
-    tbody tr:hover {
-      background-color: #f6f6f6;
-      color: black;
-    }
-    tr:nth-child(even) {
-      background-color: #8e8e8e;
-      color: white;
-    }
-    tfoot {
-      background-color:  #424242;
-    }
+  tbody tr {
+    background-color: rgb(216, 216, 216);
+    color: black; 
   }
+  tbody tr:hover {
+    background-color: #000000;
+    color: #f6f6f6;
+  }
+
+  th,
+  td {
+    padding: 1rem;
+  }
+}

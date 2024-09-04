@@ -18,6 +18,5 @@ export class TableComponent {
   @ContentChild('paginator') paginator!: TemplateRef<any>;
   @ContentChild('footer') footer!: TemplateRef<any>;
 
-  @Input() color!: string
 
 }
