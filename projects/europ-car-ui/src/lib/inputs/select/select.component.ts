@@ -21,15 +21,16 @@ import { OptionComponent } from "../option/option.component";
   ]
 
 })
-export class SelectComponent implements ControlValueAccessor,OnInit {
+export class SelectComponent implements ControlValueAccessor {
 
   
   
+   
 
   @Input()
   value:any = '';
 
-  @Output() valueChange = new EventEmitter<string>();
+  @Output() valueChange:EventEmitter<any> = new EventEmitter<any>();
 
   @Input()
   placeHolder:string ="Scegli"
@@ -67,13 +68,12 @@ export class SelectComponent implements ControlValueAccessor,OnInit {
   @Input()
   setValue(valoreIn:any){
     this.value = valoreIn;
+    this.valueChange.emit(this.value);
     this.onChange(this.value);
     
   }
  
 
- ngOnInit(): void {
-  
-}
+ 
 
 }

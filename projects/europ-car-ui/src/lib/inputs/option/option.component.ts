@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { SelectComponent } from '../select/select.component';
 
 @Component({
@@ -11,20 +11,30 @@ import { SelectComponent } from '../select/select.component';
 export class OptionComponent  {
 
 
+ 
+  
+
   @Input()
   select!:SelectComponent;
+  
 
   @Input()
   testo:string ="";
 
   @Input()
-  optionValue:string ="";
+  optionValue:any ="";
+
+
+ 
 
   selezione(input:any,name:string){
+    
+    
     this.select.setValue(input);
     this.select.isDropdownActive=false;
     this.select.selectedOption= name;
     
   }
+
 
 }
