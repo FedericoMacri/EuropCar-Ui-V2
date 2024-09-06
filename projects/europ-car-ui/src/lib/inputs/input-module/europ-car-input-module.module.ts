@@ -4,6 +4,8 @@ import { TextComponent } from '../text/text.component';
 import { FormsModule } from '@angular/forms';
 import { SelectComponent } from '../select/select.component';
 import { OptionComponent } from '../option/option.component';
+import { CustomRadioButtonComponent } from '../radio/custom-radio-button/custom-radio-button.component';
+import { CustomRadioButtonGroupComponent } from '../radio/custom-radio-button-group/custom-radio-button-group.component';
 
 
 
@@ -15,13 +17,17 @@ import { OptionComponent } from '../option/option.component';
     TextComponent,
     FormsModule,
     SelectComponent,
-    OptionComponent
+    OptionComponent,
+    CustomRadioButtonComponent,
+    CustomRadioButtonGroupComponent
     
   ],
   exports:[
     TextComponent,
     SelectComponent,
-    OptionComponent
+    OptionComponent,
+    CustomRadioButtonComponent,
+    CustomRadioButtonGroupComponent
 
   ]
   
