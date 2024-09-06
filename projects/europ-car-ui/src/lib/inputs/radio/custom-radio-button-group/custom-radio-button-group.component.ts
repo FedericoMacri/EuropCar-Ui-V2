@@ -3,7 +3,7 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CustomRadioButtonComponent } from '../custom-radio-button/custom-radio-button.component';
 
 @Component({
-  selector: 'ecar-custom-radio-button-group',
+  selector: 'ecar-radio-button-group',
   standalone: true,
   imports: [],
   templateUrl: './custom-radio-button-group.component.html',

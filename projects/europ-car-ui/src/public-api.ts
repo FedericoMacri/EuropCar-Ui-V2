@@ -1,7 +1,6 @@
 /*
  * Public API Surface of europ-car-ui
  */
-
 export * from './lib/europ-car-ui.service';
 export * from './lib/europ-car-ui.component';
 export * from './lib/europ-car.module'
@@ -22,3 +21,5 @@ export * from './lib/inputs/text/text.component'
 export * from './lib/inputs/select/select.component'
 export * from './lib/inputs/option/option.component'
 export * from './lib/table/table.component'
+export * from './lib/inputs/radio/custom-radio-button/custom-radio-button.component'
+export * from './lib/inputs/radio/custom-radio-button-group/custom-radio-button-group.component'

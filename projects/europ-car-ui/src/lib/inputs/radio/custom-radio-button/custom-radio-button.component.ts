@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'ecar-custom-radio-button',
+  selector: 'ecar-radio-button',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './custom-radio-button.component.html',
