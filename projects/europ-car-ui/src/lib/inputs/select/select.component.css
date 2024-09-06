@@ -8,17 +8,20 @@
     box-shadow: 5px 5px 5px #ccc ;
     cursor: pointer;
     position: relative;
-    min-width: 400px;
+    /* min-width: 400px; */
+    width: 30em;
    
     #dropdown{
        display: none;
        position: absolute;
-       width: 500px;
+       /* width: 500px; */
+       width: 100%;
        min-height: 100px;
        max-height: 400px;
        overflow: auto;
        box-shadow: 5px 5px 5px #ccc;
-       background-color: #049f2d;
+       /* background-color: #049f2d; */
+       background-color: rgb(193, 244, 193);
        border-radius: 10px;
        top: 100%;
        left: 0;
