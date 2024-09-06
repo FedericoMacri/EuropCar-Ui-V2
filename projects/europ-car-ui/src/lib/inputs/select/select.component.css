@@ -9,11 +9,13 @@
     cursor: pointer;
     position: relative;
     /* min-width: 400px; */
+    width: 30em;
    
     #dropdown{
        display: none;
        position: absolute;
        /* width: 500px; */
+       width: 100%;
        min-height: 100px;
        max-height: 400px;
        overflow: auto;
