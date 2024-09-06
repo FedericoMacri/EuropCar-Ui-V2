@@ -1,0 +1,17 @@
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease-out; 
+  }
+  
+  input[type="radio"]:checked {
+    accent-color: rgb(25, 124, 35);
+  }
+  
+  input[type="radio"]:checked::before {
+    border: 2px solid rgb(25, 124, 35);
+  }
+  
