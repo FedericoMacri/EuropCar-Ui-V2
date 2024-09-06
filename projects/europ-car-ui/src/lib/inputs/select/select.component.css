@@ -9,7 +9,7 @@
     cursor: pointer;
     position: relative;
     /* min-width: 400px; */
-    width: 30em;
+    width: 30ch;
    
     #dropdown{
        display: none;
